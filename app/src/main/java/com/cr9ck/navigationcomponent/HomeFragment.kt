@@ -16,6 +16,14 @@ class HomeFragment : Fragment () {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        initListrners()
+        val string = arguments?.get("arg3") as String
+        val int = arguments?.get("arg4") as Int
+        fragment_home_args.text = string + " = " + int
+    }
+
+    private fun initListrners() {
+
         fragment_home_next.setOnClickListener {
             val navController: NavController? = activity?.let {
                     it1 -> Navigation.findNavController(it1, R.id.nav_host_fragment)
@@ -28,5 +36,7 @@ class HomeFragment : Fragment () {
             }
             navController?.navigate(R.id.profileFragment)
         }
+
     }
+
 }

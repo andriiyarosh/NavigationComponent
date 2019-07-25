@@ -8,6 +8,8 @@
               android:name="com.cr9ck.navigationcomponent.HomeFragment"
               android:label="HomeFragment">
         <action android:id="@+id/action_homeFragment_to_settingsFragment" app:destination="@id/settingsFragment"/>
+        <argument android:name="arg1" app:argType="integer" android:defaultValue="-1"/>
+        <argument android:name="arg2" app:argType="string" android:defaultValue="-1"/>
     </fragment>
 
     <fragment android:id="@+id/profileFragment"

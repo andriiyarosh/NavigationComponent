@@ -20,7 +20,10 @@ class ProfileFragment: Fragment () {
             val navController: NavController? = activity?.let {
                     it1 -> Navigation.findNavController(it1, R.id.nav_host_fragment)
             }
-            navController?.navigate(R.id.action_profileFragment_to_homeFragment)
+            val bundle = Bundle()
+            bundle.putString("arg3", "Hello world!")
+            bundle.putInt("arg4", 2)
+            navController?.navigate(R.id.action_profileFragment_to_homeFragment, bundle)
         }
     }
 }
