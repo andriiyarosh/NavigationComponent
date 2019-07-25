@@ -17,8 +17,8 @@ class HomeFragment : Fragment () {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         initListrners()
-        val string = arguments?.get("arg3") as String
-        val int = arguments?.get("arg4") as Int
+        val string: String? = arguments?.let { it.get("arg3") as String? }
+        val int: Int? = arguments?.let{ it.get("arg4") as Int? }
         fragment_home_args.text = string + " = " + int
     }
 
